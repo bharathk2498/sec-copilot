@@ -13,10 +13,10 @@ class Scanner {
       findings: [
         {
           id: 'SEC-001',
-          description: 'Example hardcoded secret found',
+          description: 'Hardcoded secret found',
           severity: 'high',
-          file: 'src/example.js',
-          line: 42
+          file: 'src/app.js',
+          line: 27
         }
       ]
     };
