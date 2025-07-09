@@ -4,15 +4,13 @@ class ReportGenerator {
   }
 
   async generate(results) {
-    console.log(`📄 Generating ${this.options.output} report with ${results.findings.length} finding(s):`);
+    console.log(`\n📄 Generating ${this.options.output} report with ${results.findings.length} finding(s):\n`);
 
     results.findings.forEach((finding, index) => {
-      console.log(`\n#${index + 1}`);
-      console.log(`🔍 ID: ${finding.id}`);
-      console.log(`📜 Description: ${finding.description}`);
-      console.log(`🚨 Severity: ${finding.severity}`);
+      console.log(`[#${index + 1}] ${finding.description}`);
+      console.log(`🔒 Severity: ${finding.severity}`);
       console.log(`📁 File: ${finding.file}`);
-      console.log(`🔢 Line: ${finding.line}`);
+      console.log(`🔢 Line: ${finding.line}\n`);
     });
   }
 }
